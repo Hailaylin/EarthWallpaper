@@ -1,0 +1,23 @@
+POST https://sc-nc-web.nict.go.jp/wsdb_osndisk/fileSearch/download HTTP/1.1
+Host: sc-nc-web.nict.go.jp
+Connection: keep-alive
+Content-Length: 462
+Cache-Control: max-age=0
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Microsoft Edge";v="100"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+Origin: https://sc-nc-web.nict.go.jp
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.50
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://sc-nc-web.nict.go.jp/wsdb_osndisk/shareDirDownload/bDw2maKV?lang=en
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cookie: CAKEPHP=0pvpoq0q26pmgu6m6gq5e0229gv7cvtvvjdgfoec3riio0cg27a0; _dd_s=logs=1&id=c6277094-0314-45fd-a375-86391d5911b7&created=1650804313772&expire=1650805291896
+
+_method=POST&data%5BFileSearch%5D%5Bis_compress%5D=false&data%5BFileSearch%5D%5BfixedToken%5D=3bd25aaf5254fce7c182b1335cf7a7ccf78daa19&data%5BFileSearch%5D%5BhashUrl%5D=bDw2maKV&action=dir_download_dl&filelist%5B0%5D=%2Fosn-disk%2Fwebuser%2Fwsdb%2Fshare_directory%2FbDw2maKV%2Fpng%2FPifd%2F2022%2F04-24%2F20%2Fhima820220424200000fd.png&dl_path=%2Fosn-disk%2Fwebuser%2Fwsdb%2Fshare_directory%2FbDw2maKV%2Fpng%2FPifd%2F2022%2F04-24%2F20%2Fhima820220424200000fd.png
