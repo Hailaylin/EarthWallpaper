@@ -5,6 +5,16 @@
 # 使用
 命令行运行``python earth.py``，自动设置桌面壁纸为地球最新影像，默认为日本向日葵8号卫星每10分钟拍着的全彩全盘无灰影像
 
+## 构建exe程序
+安装pyinstall
+``pip install pyinstall``
+然后执行
+````pyinstaller -F earth.py````
+
+会在``dist``目录出现``earth.exe``
+
+[参考：《Python PyInstaller安装和使用教程（详解版）》C语言中文网文章](http://c.biancheng.net/view/2690.html)
+
 # 说明
 1. 下载到的原图放在``.\img``目录下
 2. 构建的壁纸``background.png``放在``earth.py``同级目录
