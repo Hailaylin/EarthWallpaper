@@ -3,6 +3,7 @@ import re
 import urllib3
 from urllib.parse import urlencode
 import time
+import os
 
 class Himawari8:
     """从向日葵8号获取地球图片的所有操作类
@@ -127,7 +128,7 @@ class Himawari8:
             'X-CSRFToken': self.fixedToken,
             'X-Requested-With': 'XMLHttpRequest',}
         self.session.headers.update(m)
-        print("fixedToken -> X-CSRFToken = " + self.fixedToken)
+        print("登录获取Cookie和fixedToken -> X-CSRFToken = " + self.fixedToken)
         pass
     
     def getTime(self) -> '2022/04-28/10':
@@ -136,7 +137,7 @@ class Himawari8:
         fd = Full Disk 全盘图
         获取10分钟前时间
         """
-        return time.strftime("%Y/%m-%d/%H", time.localtime(time.time()-10*60))
+        return time.strftime("%Y/%m-%d/%H")
         pass
 
     def searchPost(self):
@@ -161,6 +162,7 @@ class Himawari8:
         response = self.session.post(url ,data=data, verify=False)
         # self.showResponse(response, "searchPost")
         self.searchResponse = response.json()
+        print('检索最新地球影像：')
         print(self.searchResponse)
         pass
 
@@ -187,12 +189,13 @@ class Himawari8:
         保存也放在这吧，拆得太细，
         保存图片到指定目录 self.saveDir = ""
         '''
-        pic_list = self.searchResponse['searchList'][len(self.searchResponse['searchList'])-2]
+        pic_list = self.searchResponse['searchList'][len(self.searchResponse['searchList'])-1]
         filedir = pic_list[4]
         #filedir = "/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/" + self.getTime()+ "/hima8" + "2022 04 24 20 00 00fd.png"
         filename = pic_list[1]
         path = filedir + "/" + filename
-        print("远程下载文件名:" + path)
+        print("远程下载文件名:" + filename)
+        print("拍摄地球影像时间："+filename[13:15]+":"+filename[15:17])
         data = {
             "_method": "POST",
             "data[FileSearch][is_compress]": "false",
@@ -209,6 +212,8 @@ class Himawari8:
             with open(self.saveDir + filename, 'wb') as f:
                 f.write(r.content)
         
+        size = os.path.getsize(self.saveDir + filename) / 1024.0 / 1024
+        print("下载成功！文件大小为:{:.2f}MB".format(size))
         return self.saveDir + filename
 
 

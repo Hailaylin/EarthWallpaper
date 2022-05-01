@@ -2,3 +2,6 @@
 img
 *.saz
 *.pyc
+build/
+dist/
+__pycache__/

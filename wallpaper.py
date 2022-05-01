@@ -20,7 +20,7 @@ class Wallpaper:
         earthSize = self.screen_h,self.screen_h
         smallEarth = bigEarth.resize(earthSize)
         smallEarth.save(self.earth_resize_path)
-        print('保存调整图像', self.screen_h,'到', self.earth_resize_path)
+        print('保存调整大小后地球图像', self.screen_h,'到', self.earth_resize_path)
     
     def generateBackgroundPic(self):
         '''生成背景图片
@@ -31,13 +31,13 @@ class Wallpaper:
         smallEarth = Image.open(self.earth_resize_path)
         blackImg.paste(smallEarth, (int((self.screen_w - self.screen_h)/2),0))
         blackImg.save('background.png')
-        print('背景图保存到'+'background.png')
+        print('壁纸图已保存到'+'background.png')
 
     def setBackgroundPic(self):
         '''设置背景图片
         '''
         ctypes.windll.user32.SystemParametersInfoW(20, 0, self.backgroundPath, 0)
-        print('设置成功')
+        print('壁纸设置成功！')
 
 
 if __name__ == "__main__":

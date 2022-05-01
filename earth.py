@@ -9,3 +9,4 @@ if __name__ == "__main__":
     w.earthSmall(hima.downloadImage())
     w.generateBackgroundPic()
     w.setBackgroundPic()
+    exit()

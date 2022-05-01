@@ -15,8 +15,11 @@
 
 # print(urlencode(dataencode))
 
-data = {'searchList': [['file', 'hima820220428120000fd.png', 155875637, '2022/04/28 12:19:44', '/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/2022/04-28/12'], ['file', 'hima820220428121000fd.png', 155901296, '2022/04/28 12:29:44', '/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/2022/04-28/12'],
-                       ['file', 'hima820220428122000fd.png', 155823510, '2022/04/28 12:39:44', '/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/2022/04-28/12'], ['file', 'hima820220428123000fd.png', 155693196, '2022/04/28 12:49:45', '/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/2022/04-28/12']], 'dirList': None}
+# data = {'searchList': [['file', 'hima820220428120000fd.png', 155875637, '2022/04/28 12:19:44', '/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/2022/04-28/12'], ['file', 'hima820220428121000fd.png', 155901296, '2022/04/28 12:29:44', '/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/2022/04-28/12'],
+#                        ['file', 'hima820220428122000fd.png', 155823510, '2022/04/28 12:39:44', '/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/2022/04-28/12'], ['file', 'hima820220428123000fd.png', 155693196, '2022/04/28 12:49:45', '/osn-disk/webuser/wsdb/share_directory/bDw2maKV/png/Pifd/2022/04-28/12']], 'dirList': None}
 
-print(data['searchList'][0][4]+data['searchList'][0][1])
-print(data['searchList'][len(data['searchList'])-2])
+# print(data['searchList'][0][4]+data['searchList'][0][1])
+# print(data['searchList'][len(data['searchList'])-2])
+
+a = 'hima820220428122000fd.png'
+print(a[13:15]+":"+a[15:17])
