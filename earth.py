@@ -1,5 +1,6 @@
 from Himawari8 import Himawari8
 from wallpaper import Wallpaper
+import sys
 
 if __name__ == "__main__":
     hima = Himawari8()
@@ -9,4 +10,4 @@ if __name__ == "__main__":
     w.earthSmall(hima.downloadImage())
     w.generateBackgroundPic()
     w.setBackgroundPic()
-    exit()
+    sys.exit(0)
